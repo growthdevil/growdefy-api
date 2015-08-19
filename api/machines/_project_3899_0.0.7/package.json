@@ -1,0 +1,33 @@
+{
+  "dependencies": {},
+  "machinepack": {
+    "machines": ["create_box", "create_organization", "create_organizationacl", "create_organizationsubscriptions", "create_user", "destroy_box", "destroy_organization", "destroy_organizationacl", "destroy_organizationsubscriptions", "destroy_user", "findOne_box", "findOne_organization", "findOne_organizationacl", "findOne_organizationsubscriptions", "findOne_user", "find_box", "find_organization", "find_organizationacl", "find_organizationsubscriptions", "find_user", "update_box", "update_organization", "update_organizationacl", "update_organizationsubscriptions", "update_user"],
+    "machineVersions": {
+      "create_box": "0.0.22",
+      "create_organization": "0.0.4",
+      "create_organizationacl": "0.0.4",
+      "create_organizationsubscriptions": "0.0.5",
+      "create_user": "0.0.8",
+      "destroy_box": "0.0.22",
+      "destroy_organization": "0.0.4",
+      "destroy_organizationacl": "0.0.4",
+      "destroy_organizationsubscriptions": "0.0.5",
+      "destroy_user": "0.0.8",
+      "findOne_box": "0.0.22",
+      "findOne_organization": "0.0.4",
+      "findOne_organizationacl": "0.0.4",
+      "findOne_organizationsubscriptions": "0.0.5",
+      "findOne_user": "0.0.8",
+      "find_box": "0.0.22",
+      "find_organization": "0.0.4",
+      "find_organizationacl": "0.0.4",
+      "find_organizationsubscriptions": "0.0.5",
+      "find_user": "0.0.8",
+      "update_box": "0.0.22",
+      "update_organization": "0.0.4",
+      "update_organizationacl": "0.0.4",
+      "update_organizationsubscriptions": "0.0.5",
+      "update_user": "0.0.8"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"attributes":{"organizationID":{"type":"string","unique":false,"required":true},"Permissions":{"type":"string","unique":false,"required":true},"ActiveDate":{"type":"string","unique":false,"required":true},"paymentToken":{"type":"string","unique":false,"required":true}},"globalId":"Organizationsubscriptions","identity":"organizationsubscriptions"}
