@@ -1,6 +1,9 @@
 module.exports.routes = {
-  "post /signUp": {
-    "target": "SignUpController.create"
+  "get /": {
+    "target": "Home$Controller.find"
+  },
+  "post /createOrganization": {
+    "target": "CreateOrganizationController.create"
   },
   "post /addbox": {
     "target": "AddboxController.create"
@@ -11,8 +14,8 @@ module.exports.routes = {
   "put /updateBox": {
     "target": "UpdateBoxController.update"
   },
-  "post /createOrganization": {
-    "target": "CreateOrganizationController.create"
+  "get /sessionme": {
+    "target": "SessionmeController.find"
   },
   "get /getOrgDetails": {
     "target": "GetOrgDetailsController.find"
@@ -29,14 +32,14 @@ module.exports.routes = {
   "get /getOrganizations": {
     "target": "GetOrganizationsController.find"
   },
-  "get /sessionme": {
-    "target": "SessionmeController.find"
+  "get /logout": {
+    "target": "LogoutController.find"
   },
   "post /organizationtosession": {
     "target": "OrganizationtosessionController.create"
   },
-  "get /logout": {
-    "target": "LogoutController.find"
+  "post /signUp": {
+    "target": "SignUpController.create"
   },
   "put /login": {
     "target": "LoginController.update"
