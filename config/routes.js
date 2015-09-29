@@ -1,50 +1,74 @@
 module.exports.routes = {
-  "get /": {
-    "target": "Home$Controller.find"
+  "post /organizationtosession": {
+    "target": "OrganizationtosessionController.create"
   },
   "post /createOrganization": {
     "target": "CreateOrganizationController.create"
   },
-  "post /addbox": {
-    "target": "AddboxController.create"
+  "delete /deletegtpm": {
+    "target": "DeletegtpmController.destroy"
   },
-  "put /updateOrganization": {
-    "target": "UpdateOrganizationController.update"
+  "get /gettactics": {
+    "target": "GettacticsController.find"
+  },
+  "put /updategtpm": {
+    "target": "UpdategtpmController.update"
   },
   "put /updateBox": {
     "target": "UpdateBoxController.update"
   },
-  "get /sessionme": {
-    "target": "SessionmeController.find"
+  "put /login": {
+    "target": "LoginController.update"
+  },
+  "post /addbox": {
+    "target": "AddboxController.create"
   },
   "get /getOrgDetails": {
     "target": "GetOrgDetailsController.find"
   },
-  "delete /deleteOrganization": {
-    "target": "DeleteOrganizationController.destroy"
+  "get /logout": {
+    "target": "LogoutController.find"
   },
-  "post /addUserToOrganization": {
-    "target": "AddUserToOrganizationController.create"
+  "get /sessionme": {
+    "target": "SessionmeController.find"
+  },
+  "put /updatetactics": {
+    "target": "UpdatetacticsController.update"
   },
   "get /getBoxes": {
     "target": "GetBoxesController.find"
   },
-  "get /getOrganizations": {
-    "target": "GetOrganizationsController.find"
+  "put /updateOrganization": {
+    "target": "UpdateOrganizationController.update"
   },
-  "get /logout": {
-    "target": "LogoutController.find"
-  },
-  "post /organizationtosession": {
-    "target": "OrganizationtosessionController.create"
+  "get /": {
+    "target": "Home$Controller.find"
   },
   "post /signUp": {
     "target": "SignUpController.create"
   },
-  "put /login": {
-    "target": "LoginController.update"
-  },
   "delete /bootUser": {
     "target": "BootUserController.destroy"
+  },
+  "post /creategtpm": {
+    "target": "CreategtpmController.create"
+  },
+  "delete /deleteOrganization": {
+    "target": "DeleteOrganizationController.destroy"
+  },
+  "delete /deletetactic": {
+    "target": "DeletetacticController.destroy"
+  },
+  "post /addUserToOrganization": {
+    "target": "AddUserToOrganizationController.create"
+  },
+  "post /addtactic": {
+    "target": "AddtacticController.create"
+  },
+  "get /getOrganizations": {
+    "target": "GetOrganizationsController.find"
+  },
+  "get /getgtpm": {
+    "target": "GetgtpmController.find"
   }
 };

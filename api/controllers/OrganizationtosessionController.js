@@ -17,8 +17,9 @@ module.exports = {
                     "value": (req.session.me ? (req.session.me + '') : '')
                 }).exec({
                     "error": function(ifDefined) {
-                        return exits.error({
-                            data: ifDefined,
+                        return exits.respond({
+                            data: "error1",
+                            action: "respond_with_value_and_status",
                             status: 500
                         });
 
@@ -49,8 +50,9 @@ module.exports = {
                                     req: req
                                 }).exec({
                                     "error": function(saveOrganizationIDToSession) {
-                                        return exits.error({
-                                            data: saveOrganizationIDToSession,
+                                        return exits.respond({
+                                            data: "error3",
+                                            action: "respond_with_value_and_status",
                                             status: 500
                                         });
 
@@ -64,8 +66,9 @@ module.exports = {
                                             req: req
                                         }).exec({
                                             "error": function(saveWritePermissionsSession) {
-                                                return exits.error({
-                                                    data: saveWritePermissionsSession,
+                                                return exits.respond({
+                                                    data: "error4",
+                                                    action: "respond_with_value_and_status",
                                                     status: 500
                                                 });
 
@@ -79,8 +82,9 @@ module.exports = {
                                                     req: req
                                                 }).exec({
                                                     "error": function(saveDeletePermissionsToSession) {
-                                                        return exits.error({
-                                                            data: saveDeletePermissionsToSession,
+                                                        return exits.respond({
+                                                            data: "error5",
+                                                            action: "respond_with_value_and_status",
                                                             status: 500
                                                         });
 
@@ -103,8 +107,9 @@ module.exports = {
 
                             },
                             "error": function(findOneOrganizationacl) {
-                                return exits.error({
-                                    data: findOneOrganizationacl,
+                                return exits.respond({
+                                    data: "error2",
+                                    action: "respond_with_value_and_status",
                                     status: 500
                                 });
 

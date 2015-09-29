@@ -3,26 +3,13 @@ module.exports = {
     'update': function(req, res) {
         Machine.build({
             inputs: {
-                "yCoordinate": {
-                    "example": -8232,
+                "name": {
+                    "example": "ROI",
                     "required": true
                 },
-                "xCoordinate": {
-                    "example": 12345,
+                "weight": {
+                    "example": 2,
                     "required": true
-                },
-                "contentTitle": {
-                    "example": "ijdasn",
-                    "required": true
-                },
-                "contentType": {
-                    "example": 1
-                },
-                "boxRelationship": {
-                    "example": "\"[231908,\"*\",219837,\"+\",9824]\""
-                },
-                "contentValue": {
-                    "example": 12
                 },
                 "id": {
                     "example": "abc123"
@@ -77,32 +64,28 @@ module.exports = {
 
                                     },
                                     "success": function(ifPermissionsStringEqualsTrueString) {
-                                        // Update Box
-                                        sails.machines['_project_3899_0.0.7'].update_box({
-                                            "yCoordinate": inputs.yCoordinate,
-                                            "xCoordinate": inputs.xCoordinate,
+                                        // Update Gtpm
+                                        sails.machines['_project_3899_0.0.7'].update_gtpm({
                                             "organizationID": (req.session.organizationID ? (req.session.organizationID + '') : ''),
-                                            "contentTitle": inputs.contentTitle,
-                                            "contentType": inputs.contentType,
-                                            "boxRelationship": inputs.boxRelationship,
-                                            "contentValue": inputs.contentValue,
+                                            "name": inputs.name,
+                                            "weight": inputs.weight,
                                             "criteria": {
                                                 id: inputs.id
                                             }
                                         }).setEnvironment({
                                             sails: sails
                                         }).exec({
-                                            "success": function(updateBox) {
+                                            "success": function(updateGtpm) {
                                                 return exits.respond({
-                                                    data: updateBox,
+                                                    data: updateGtpm,
                                                     action: "respond_with_result_and_status",
                                                     status: 200
                                                 });
 
                                             },
-                                            "error": function(updateBox) {
+                                            "error": function(updateGtpm) {
                                                 return exits.error({
-                                                    data: updateBox,
+                                                    data: updateGtpm,
                                                     status: 500
                                                 });
 

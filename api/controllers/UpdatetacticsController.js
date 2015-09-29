@@ -3,26 +3,26 @@ module.exports = {
     'update': function(req, res) {
         Machine.build({
             inputs: {
-                "yCoordinate": {
-                    "example": -8232,
+                "ranking": {
+                    "example": 2
+                },
+                "priorityArray": {
+                    "example": "[3,2,5}"
+                },
+                "details": {
+                    "example": "this tactic implies doing x and y for the z segment"
+                },
+                "segment": {
+                    "example": "Boys",
                     "required": true
                 },
-                "xCoordinate": {
-                    "example": 12345,
+                "type": {
+                    "example": 2,
                     "required": true
                 },
-                "contentTitle": {
-                    "example": "ijdasn",
+                "name": {
+                    "example": "Tactic1",
                     "required": true
-                },
-                "contentType": {
-                    "example": 1
-                },
-                "boxRelationship": {
-                    "example": "\"[231908,\"*\",219837,\"+\",9824]\""
-                },
-                "contentValue": {
-                    "example": 12
                 },
                 "id": {
                     "example": "abc123"
@@ -77,32 +77,32 @@ module.exports = {
 
                                     },
                                     "success": function(ifPermissionsStringEqualsTrueString) {
-                                        // Update Box
-                                        sails.machines['_project_3899_0.0.7'].update_box({
-                                            "yCoordinate": inputs.yCoordinate,
-                                            "xCoordinate": inputs.xCoordinate,
+                                        // Update Tactics
+                                        sails.machines['_project_3899_0.0.7'].update_tactics({
+                                            "ranking": inputs.ranking,
                                             "organizationID": (req.session.organizationID ? (req.session.organizationID + '') : ''),
-                                            "contentTitle": inputs.contentTitle,
-                                            "contentType": inputs.contentType,
-                                            "boxRelationship": inputs.boxRelationship,
-                                            "contentValue": inputs.contentValue,
+                                            "details": inputs.details,
+                                            "segment": inputs.segment,
+                                            "type": inputs.type,
+                                            "priorityArray": inputs.priorityArray,
+                                            "name": inputs.name,
                                             "criteria": {
                                                 id: inputs.id
                                             }
                                         }).setEnvironment({
                                             sails: sails
                                         }).exec({
-                                            "success": function(updateBox) {
+                                            "success": function(updateTactics) {
                                                 return exits.respond({
-                                                    data: updateBox,
+                                                    data: updateTactics,
                                                     action: "respond_with_result_and_status",
                                                     status: 200
                                                 });
 
                                             },
-                                            "error": function(updateBox) {
+                                            "error": function(updateTactics) {
                                                 return exits.error({
-                                                    data: updateBox,
+                                                    data: updateTactics,
                                                     status: 500
                                                 });
 

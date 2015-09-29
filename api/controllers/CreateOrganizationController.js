@@ -15,7 +15,7 @@ module.exports = {
                     "example": "2012-11-04 14:55:45",
                     "required": true
                 },
-                "someToken": {
+                "paymentToken": {
                     "example": "dDh5ank214Js123",
                     "required": true
                 }
@@ -67,7 +67,7 @@ module.exports = {
                                             "organizationID": (createOrganization && createOrganization.id),
                                             "Permissions": inputs.permissions,
                                             "ActiveDate": inputs.dateExpired,
-                                            "paymentToken": inputs.someToken
+                                            "paymentToken": inputs.paymentToken
                                         }).setEnvironment({
                                             sails: sails
                                         }).exec({

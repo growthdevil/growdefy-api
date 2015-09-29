@@ -1,29 +1,8 @@
 var Machine = require("machine");
 module.exports = {
-    'update': function(req, res) {
+    'destroy': function(req, res) {
         Machine.build({
             inputs: {
-                "yCoordinate": {
-                    "example": -8232,
-                    "required": true
-                },
-                "xCoordinate": {
-                    "example": 12345,
-                    "required": true
-                },
-                "contentTitle": {
-                    "example": "ijdasn",
-                    "required": true
-                },
-                "contentType": {
-                    "example": 1
-                },
-                "boxRelationship": {
-                    "example": "\"[231908,\"*\",219837,\"+\",9824]\""
-                },
-                "contentValue": {
-                    "example": 12
-                },
                 "id": {
                     "example": "abc123"
                 }
@@ -59,7 +38,7 @@ module.exports = {
                             "otherwise": function(checkIfSuperUser) {
                                 // if permissions string equals true string
                                 sails.machines['4bf9c923-efd3-4077-b3e1-6b8d84d740c0_1.2.0'].ifEqual({
-                                    "a": (req.session.writePermissions ? (req.session.writePermissions + '') : ''),
+                                    "a": (req.session.deletePermissions ? (req.session.deletePermissions + '') : ''),
                                     "b": trueAsString
                                 }).exec({
                                     "error": function(ifPermissionsStringEqualsTrueString) {
@@ -77,32 +56,25 @@ module.exports = {
 
                                     },
                                     "success": function(ifPermissionsStringEqualsTrueString) {
-                                        // Update Box
-                                        sails.machines['_project_3899_0.0.7'].update_box({
-                                            "yCoordinate": inputs.yCoordinate,
-                                            "xCoordinate": inputs.xCoordinate,
-                                            "organizationID": (req.session.organizationID ? (req.session.organizationID + '') : ''),
-                                            "contentTitle": inputs.contentTitle,
-                                            "contentType": inputs.contentType,
-                                            "boxRelationship": inputs.boxRelationship,
-                                            "contentValue": inputs.contentValue,
+                                        // Destroy Gtpm
+                                        sails.machines['_project_3899_0.0.7'].destroy_gtpm({
                                             "criteria": {
                                                 id: inputs.id
                                             }
                                         }).setEnvironment({
                                             sails: sails
                                         }).exec({
-                                            "success": function(updateBox) {
+                                            "success": function(destroyGtpm) {
                                                 return exits.respond({
-                                                    data: updateBox,
+                                                    data: destroyGtpm,
                                                     action: "respond_with_result_and_status",
                                                     status: 200
                                                 });
 
                                             },
-                                            "error": function(updateBox) {
+                                            "error": function(destroyGtpm) {
                                                 return exits.error({
-                                                    data: updateBox,
+                                                    data: destroyGtpm,
                                                     status: 500
                                                 });
 

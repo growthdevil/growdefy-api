@@ -1,0 +1,1 @@
+{"attributes":{"organizationID":{"type":"string","unique":false,"required":true},"name":{"type":"string","unique":false,"required":true},"weight":{"type":"integer","unique":false,"required":true}},"globalId":"Gtpm","identity":"gtpm"}
