@@ -5,18 +5,18 @@ files:
     destination: /home/bitnami/project
 hooks:
   BeforeInstall:
-    - location: deploy_scripts/BeforeInstalling.sh
+    - location: deploy_scripts/BeforeInstall.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: deploy_scripts/AfterInstalling.sh
+    - location: deploy_scripts/AfterInstall.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: deploy_scripts/ApplicationStartint.sh
+    - location: deploy_scripts/ApplicationStart.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: deploy_scripts/ApplicationStopping.sh
+    - location: deploy_scripts/ApplicationStop.sh
       timeout: 300
       runas: root
