@@ -26,9 +26,9 @@ module.exports = {
       "friendlyName": "then",
       "example": [{
         "name": "string",
-        "id": 123,
-        "createdAt": "2015-08-04T08:30:14.216Z",
-        "updatedAt": "2015-08-04T08:30:14.216Z"
+        "id": "String",
+        "createdAt": "2015-09-30T02:02:24.757Z",
+        "updatedAt": "2015-09-30T02:02:24.757Z"
       }]
     },
     "error": {

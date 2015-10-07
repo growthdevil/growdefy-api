@@ -14,9 +14,9 @@ module.exports = {
         "password": "abc123",
         "username": "akashKakumani",
         "superUser": false,
-        "id": 123,
-        "createdAt": "2015-08-19T01:31:51.956Z",
-        "updatedAt": "2015-08-19T01:31:51.956Z"
+        "id": "String",
+        "createdAt": "2015-09-30T02:02:38.282Z",
+        "updatedAt": "2015-09-30T02:02:38.282Z"
       }]
     },
     "error": {

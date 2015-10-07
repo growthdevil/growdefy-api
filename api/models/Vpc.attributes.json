@@ -1,0 +1,1 @@
+{"attributes":{"roles":{"type":"string","unique":false,"required":true}},"globalId":"Vpc","identity":"vpc"}

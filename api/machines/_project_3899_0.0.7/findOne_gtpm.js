@@ -13,9 +13,9 @@ module.exports = {
         "organizationID": "String",
         "name": "ROI",
         "weight": 2,
-        "id": 123,
-        "createdAt": "2015-09-22T23:10:02.791Z",
-        "updatedAt": "2015-09-22T23:10:02.791Z"
+        "id": "String",
+        "createdAt": "2015-09-30T02:00:59.142Z",
+        "updatedAt": "2015-09-30T02:00:59.142Z"
       }
     },
     "error": {

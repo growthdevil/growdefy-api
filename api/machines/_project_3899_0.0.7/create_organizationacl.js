@@ -10,14 +10,14 @@ module.exports = {
       "friendlyName": "organizationID",
       "required": true
     },
-    "writePermissions": {
-      "example": true,
-      "friendlyName": "writePermissions",
-      "required": true
-    },
     "deletePermissions": {
       "example": true,
       "friendlyName": "deletePermissions",
+      "required": true
+    },
+    "writePermissions": {
+      "example": true,
+      "friendlyName": "writePermissions",
       "required": true
     }
   },
@@ -27,11 +27,11 @@ module.exports = {
       "example": {
         "userID": "abc123",
         "organizationID": "abc123",
-        "writePermissions": true,
         "deletePermissions": true,
-        "id": 123,
-        "createdAt": "2015-08-04T08:38:42.794Z",
-        "updatedAt": "2015-08-04T08:38:42.794Z"
+        "writePermissions": true,
+        "id": "String",
+        "createdAt": "2015-09-30T02:01:51.797Z",
+        "updatedAt": "2015-09-30T02:01:51.797Z"
       }
     },
     "error": {

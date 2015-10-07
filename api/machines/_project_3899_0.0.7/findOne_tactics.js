@@ -13,13 +13,13 @@ module.exports = {
         "organizationID": "abc123",
         "ranking": 2,
         "details": "this tactic implies doing x and y for the z segment",
-        "segment": "Boys",
+        "segmentID": "abc123",
         "type": 2,
         "priorityArray": "[3,2,5}",
         "name": "Tactic1",
-        "id": 123,
-        "createdAt": "2015-09-23T04:56:36.935Z",
-        "updatedAt": "2015-09-23T04:56:36.935Z"
+        "id": "String",
+        "createdAt": "2015-10-06T22:54:08.830Z",
+        "updatedAt": "2015-10-06T22:54:08.830Z"
       }
     },
     "error": {

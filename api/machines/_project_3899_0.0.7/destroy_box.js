@@ -17,9 +17,9 @@ module.exports = {
         "contentType": 1,
         "boxRelationship": "\"[231908,\"*\",219837,\"+\",9824]\"",
         "contentValue": 12,
-        "id": 123,
-        "createdAt": "2015-08-04T22:21:26.958Z",
-        "updatedAt": "2015-08-04T22:21:26.958Z"
+        "id": "String",
+        "createdAt": "2015-09-30T02:02:08.787Z",
+        "updatedAt": "2015-09-30T02:02:08.787Z"
       }]
     },
     "error": {

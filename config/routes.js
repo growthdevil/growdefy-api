@@ -1,6 +1,24 @@
 module.exports.routes = {
+  "post /addsegment": {
+    "target": "AddsegmentController.create"
+  },
   "post /organizationtosession": {
     "target": "OrganizationtosessionController.create"
+  },
+  "get /getBoxes": {
+    "target": "GetBoxesController.find"
+  },
+  "post /addtactic": {
+    "target": "AddtacticController.create"
+  },
+  "put /updateBox": {
+    "target": "UpdateBoxController.update"
+  },
+  "put /updategtpm": {
+    "target": "UpdategtpmController.update"
+  },
+  "post /creategtpm": {
+    "target": "CreategtpmController.create"
   },
   "post /createOrganization": {
     "target": "CreateOrganizationController.create"
@@ -11,64 +29,55 @@ module.exports.routes = {
   "get /gettactics": {
     "target": "GettacticsController.find"
   },
-  "put /updategtpm": {
-    "target": "UpdategtpmController.update"
-  },
-  "put /updateBox": {
-    "target": "UpdateBoxController.update"
+  "get /getgtpm": {
+    "target": "GetgtpmController.find"
   },
   "put /login": {
     "target": "LoginController.update"
   },
-  "post /addbox": {
-    "target": "AddboxController.create"
-  },
   "get /getOrgDetails": {
     "target": "GetOrgDetailsController.find"
   },
-  "get /logout": {
-    "target": "LogoutController.find"
-  },
-  "get /sessionme": {
-    "target": "SessionmeController.find"
-  },
-  "put /updatetactics": {
-    "target": "UpdatetacticsController.update"
-  },
-  "get /getBoxes": {
-    "target": "GetBoxesController.find"
-  },
-  "put /updateOrganization": {
-    "target": "UpdateOrganizationController.update"
-  },
-  "get /": {
-    "target": "Home$Controller.find"
-  },
-  "post /signUp": {
-    "target": "SignUpController.create"
-  },
-  "delete /bootUser": {
-    "target": "BootUserController.destroy"
-  },
-  "post /creategtpm": {
-    "target": "CreategtpmController.create"
+  "post /addbox": {
+    "target": "AddboxController.create"
   },
   "delete /deleteOrganization": {
     "target": "DeleteOrganizationController.destroy"
   },
-  "delete /deletetactic": {
-    "target": "DeletetacticController.destroy"
+  "get /logout": {
+    "target": "LogoutController.find"
+  },
+  "put /updatetactics": {
+    "target": "UpdatetacticsController.update"
+  },
+  "get /sessionme": {
+    "target": "SessionmeController.find"
+  },
+  "get /getsegments": {
+    "target": "GetsegmentsController.find"
+  },
+  "get /": {
+    "target": "Home$Controller.find"
+  },
+  "put /archivesegment": {
+    "target": "ArchivesegmentController.update"
+  },
+  "delete /bootUser": {
+    "target": "BootUserController.destroy"
+  },
+  "post /signUp": {
+    "target": "SignUpController.create"
   },
   "post /addUserToOrganization": {
     "target": "AddUserToOrganizationController.create"
   },
-  "post /addtactic": {
-    "target": "AddtacticController.create"
+  "put /updateOrganization": {
+    "target": "UpdateOrganizationController.update"
   },
   "get /getOrganizations": {
     "target": "GetOrganizationsController.find"
   },
-  "get /getgtpm": {
-    "target": "GetgtpmController.find"
+  "delete /deletetactic": {
+    "target": "DeletetacticController.destroy"
   }
 };

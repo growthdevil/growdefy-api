@@ -29,9 +29,9 @@ module.exports = {
         "Permissions": "[1,2]",
         "ActiveDate": "2012-11-04 14:55:45",
         "paymentToken": "dDh5ank214Js123",
-        "id": 123,
-        "createdAt": "2015-08-11T22:17:17.919Z",
-        "updatedAt": "2015-08-11T22:17:17.919Z"
+        "id": "String",
+        "createdAt": "2015-09-30T02:01:36.254Z",
+        "updatedAt": "2015-09-30T02:01:36.254Z"
       }
     },
     "error": {
